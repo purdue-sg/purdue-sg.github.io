@@ -50,6 +50,18 @@
       for (let d = 1; d <= daysInMonth; d++) {
         const dayCell = document.createElement('div');
         dayCell.textContent = d;
+        // check for events on this date
+        const isoDate = `${year}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+        if (events[isoDate]) {
+            const evList = document.createElement('ul');
+            evList.className = 'events';
+            events[isoDate].forEach(evText => {
+                const li = document.createElement('li');
+                li.textContent = evText;
+                evList.appendChild(li);
+            });
+            dayCell.appendChild(evList);
+        }
         daysGrid.appendChild(dayCell);
       }
   
