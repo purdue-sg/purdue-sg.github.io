@@ -1,6 +1,10 @@
 // calendar.js
 
 (function() {
+    // YYYY-MM-DD → [array of event strings]
+    const events = {
+        '2025-04-30': ['🐶 Pet a Puppy']
+    };
     const monthNames = [
       'January','February','March','April','May','June',
       'July','August','September','October','November','December'

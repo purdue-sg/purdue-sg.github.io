@@ -46,4 +46,30 @@
   .calendar-month .days div.empty {
     background: #fafafa;
   }
+
+  .calendar-month .days div {
+    position: relative;
+    padding: 0.5rem;
+    text-align: center;
+    min-height: 2.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .calendar-month .days .events {
+    list-style: none;
+    margin: 0.25rem 0 0;
+    padding: 0;
+  }
+  
+  .calendar-month .days .events li {
+    background: #fffae0;
+    color: #333;
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   
