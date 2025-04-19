@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>PSG Portal – <div Events=""></div></title>
-        <link rel="stylesheet" href="css/style.css" />
-      </head>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PSG Portal – Events</title>
+  <!-- sitewide styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- calendar widget styles -->
+  <link rel="stylesheet" href="css/calendar.css" />
+</head>
 <body>
     <header>
-    <h1>PSG Events</h1>
+        <h1>Board of Director Points</h1>
     </header>
 
     <nav>
-        <ul>
-          <li><a href="absence.html">Absence Request</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="statistics.html">Statistics</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="points.html">Points</a></li>
-          <li><a href="documents.html">Documents</a></li>
-          <li><a href="sharepoint.html">SharePoint</a></li>
-        </ul>
+    <ul>
+        <li><a href="absence.html">Absence Request</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="points.html">Points</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="sharepoint.html">SharePoint</a></li>
+    </ul>
     </nav>
 
-  <main class="container">
+    <main class="container">
+    <!-- UNIQUE CONTENT FOR THIS PAGE: -->
     <section>
-      <h2>Events Calendar</h2>
-      <p>Here are all the upcoming PSG events:</p>
-      <div id="calendar"></div>
-      <!-- maybe a list or calendar widget… -->
+        <h2>Events Calendar</h2>
+        <div id="calendar"></div>
     </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Purdue Student Government. All rights reserved.</p>
-  </footer>
-  <script src="js/calendar.js"></script>
+    </main>
+
+    <!-- calendar generator script -->
+    <script src="js/calendar.js"></script>
+    
+      <footer>
+        <p>&copy; 2025 Purdue Student Government. All rights reserved.</p>
+      </footer>
 </body>
 </html>
