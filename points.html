@@ -10,7 +10,7 @@
     .points-graph {
       display: block;
       max-width: 100%;
-      height: auto;
+      height: 600px;
       margin: 0 auto 2rem;
     }
     /* style for the earning‑points list */
@@ -78,35 +78,36 @@
   
     // 3) Create the chart
     new Chart(ctx, {
-      type: 'line',
-      data: {
+        type: 'bar',
+        data: {
         labels: labels,
         datasets: [{
-          label: 'Member Points',
-          data: dataPoints,
-          borderColor: '#4CAF50',    // your green (or gold '#FFD700')
-          backgroundColor: 'rgba(76,175,80,0.2)', // semi‑transparent fill
-          fill: true,
-          tension: 0.3               // smooth curves
+            label: 'Member Points',
+            data: dataPoints,
+            borderColor: '#4CAF50',    // your green (or gold '#FFD700')
+            backgroundColor: 'rgba(76,175,80,0.2)', // semi‑transparent fill
+            borderWidth: 1
         }]
-      },
-      options: {
+        },
+        options: {
         responsive: true,
+        maintainAspectRatio: false,   // ← allow using CSS height
         plugins: {
-          legend: { position: 'bottom' }
+        legend: { position: 'bottom' }
         },
         scales: {
-          x: {
-            title: { display: true, text: 'Committee' }
-          },
-          y: {
+        x: {
+            title: { display: true, text: 'Date' },
+            ticks: { maxRotation: 90, minRotation: 45 }
+        },
+        y: {
             title: { display: true, text: 'Points' },
             beginAtZero: true
-          }
+            }
         }
-      }
+        }
     });
-  </script>
+    </script>
 
   <footer>
     <p>&copy; 2025 Purdue Student Government. All rights reserved.</p>
