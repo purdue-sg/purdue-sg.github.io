@@ -113,4 +113,35 @@ nav a {
   }
 }
 
+/* icon‑links container */
+#useful-links .icon-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* each icon link */
+#useful-links .icon-links a {
+  font-size: 2rem;           /* size of the icon */
+  color: #333;               /* default icon color */
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;               /* square hit area */
+  height: 3rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+/* hover/focus states */
+#useful-links .icon-links a:hover,
+#useful-links .icon-links a:focus {
+  color: #FFD700;            /* gold on hover */
+  background: #fdf7e0;       /* subtle highlight */
+}
+
+
 
