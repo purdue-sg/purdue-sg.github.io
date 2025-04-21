@@ -125,7 +125,7 @@ nav a {
 /* each icon link */
 #useful-links .icon-links a {
   font-size: 2rem;           /* size of the icon */
-  color: #333;               /* default icon color */
+  color: #555960;               /* default icon color */
   transition: color 0.2s;
   display: inline-flex;
   align-items: center;
