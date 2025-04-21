@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PSG Portal – <div points=""></div></title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* center the graph and give it some breathing room */
+    .points-graph {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 2rem;
+    }
+    /* style for the earning‑points list */
+    #earning-points ul {
+      list-style: disc inside;
+      margin-left: 1rem;
+    }
+  </style>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma"        content="no-cache" />
+  <meta http-equiv="Expires"       content="0" />
 </head>
 <body>
   <header>
@@ -24,10 +41,27 @@
   </nav>
 
   <main class="container">
-    <!-- UNIQUE CONTENT FOR THIS PAGE: -->
-    <section>
-      <h2>Points</h2>
-      <p>…your page‑specific content here…</p>
+    <!-- Graph image -->
+    <section id="points-graph-section">
+      <h2>Member Points Overview</h2>
+      <img
+        src="https://drive.google.com/file/d/1256xfexeG691KmyuCwkG1FInrFXSfNXg/view?usp=sharing"
+        alt="Graph of member points over time"
+        class="points-graph"
+      />
+    </section>
+
+    <!-- Ways to Earn Points -->
+    <section id="earning-points">
+      <h2>Ways to Earn Points</h2>
+      <ul>
+        <li>Attend weekly PSG meetings</li>
+        <li>Volunteer at PSU‑sponsored events</li>
+        <li>Submit timely absence requests when you can’t make a meeting</li>
+        <li>Participate in special committees or task forces</li>
+        <li>Lead a project or initiative (e.g., community outreach)</li>
+        <li>Complete training workshops (leadership, diversity, etc.)</li>
+      </ul>
     </section>
   </main>
 
