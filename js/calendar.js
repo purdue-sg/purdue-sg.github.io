@@ -66,32 +66,31 @@ document.addEventListener('DOMContentLoaded', () => {
         ].join('-');
   
         if (events[isoDate]) {
-          // mark it clickable
+            // mark it clickable
             dayCell.classList.add('has-event');
-
+    
             // build the hidden list
             const ul = document.createElement('ul');
             ul.className = 'events';
             events[isoDate].forEach(text => {
-                const li = document.createElement('li');
-                li.textContent = text;
-                ul.appendChild(li);
+              const li = document.createElement('li');
+              li.textContent = text;
+              ul.appendChild(li);
             });
             dayCell.appendChild(ul);
+    
             // toggle on click
             dayCell.addEventListener('click', () => {
-                dayCell.classList.toggle('active');
+              dayCell.classList.toggle('active');
             });
+          }
+    
+          daysGrid.appendChild(dayCell);
         }
-  
-        daysGrid.appendChild(dayCell);
+    
+        monthEl.appendChild(daysGrid);
+        container.appendChild(monthEl);
       }
-  
-      monthEl.appendChild(daysGrid);
-      calendarContainer.appendChild(monthEl);
-    }
-  
-    console.log('🎉 calendar render complete');
-  });
+    });
   
   
