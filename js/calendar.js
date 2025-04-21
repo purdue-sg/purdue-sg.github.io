@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log('✅ Found calendar container, rendering for year', year);
   
-    for (let m = 0; m < 12; m++) {
+    for (let m = 0; m < 6; m++) {
       const firstDay   = new Date(year, m, 1).getDay();
       const daysInMonth = new Date(year, m + 1, 0).getDate();
   
