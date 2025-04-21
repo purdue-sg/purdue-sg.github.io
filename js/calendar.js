@@ -3,8 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // map of ISO dates → event names
     const events = {
-      '2025-04-30': ['🐶 Pet a Puppy', 
-                     'Krach Lawn 12-4pm']
+      '2025-04-30': ['🐶 Pet a Puppy\nKrach Lawn 12-4pm']
     };
   
     const monthNames = [

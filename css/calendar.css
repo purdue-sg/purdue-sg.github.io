@@ -89,4 +89,8 @@
     display: block;
     margin-top: 0.25rem;
   }
+
+  .calendar-month .days .events li {
+    white-space: pre-line;
+  }
   
