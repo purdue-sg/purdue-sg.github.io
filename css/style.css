@@ -131,8 +131,8 @@ nav a {
   align-items: center;
   justify-content: center;
   margin: 2rem;
-  width: 3rem;               /* square hit area */
-  height: 3rem;
+  width: 4rem;               /* square hit area */
+  height: 4rem;
   border-radius: 0.5rem;
   text-decoration: none;
 }
