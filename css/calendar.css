@@ -72,4 +72,21 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  .calendar-month .events {
+    display: none;
+  }
+  
+  /* indicate days with events are clickable */
+  .calendar-month .days div.has-event {
+    cursor: pointer;
+    /* optional: give a slight highlight */
+    background: #fffbf0;
+  }
+  
+  /* when a day-cell has the "active" class, show its events */
+  .calendar-month .days div.has-event.active .events {
+    display: block;
+    margin-top: 0.25rem;
+  }
   

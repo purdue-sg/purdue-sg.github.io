@@ -66,15 +66,22 @@ document.addEventListener('DOMContentLoaded', () => {
         ].join('-');
   
         if (events[isoDate]) {
-          console.log('→ adding events for', isoDate, events[isoDate]);
-          const ul = document.createElement('ul');
-          ul.className = 'events';
-          events[isoDate].forEach(text => {
-            const li = document.createElement('li');
-            li.textContent = text;
-            ul.appendChild(li);
-          });
-          dayCell.appendChild(ul);
+          // mark it clickable
+            dayCell.classList.add('has-event');
+
+            // build the hidden list
+            const ul = document.createElement('ul');
+            ul.className = 'events';
+            events[isoDate].forEach(text => {
+                const li = document.createElement('li');
+                li.textContent = text;
+                ul.appendChild(li);
+            });
+            dayCell.appendChild(ul);
+            // toggle on click
+            dayCell.addEventListener('click', () => {
+                dayCell.classList.toggle('active');
+            });
         }
   
         daysGrid.appendChild(dayCell);
