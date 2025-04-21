@@ -24,31 +24,30 @@
   <meta http-equiv="Expires"       content="0" />
 </head>
 <body>
-  <header>
-    <h1>Board of Director Points</h1>
-  </header>
+    <header>
+        <h1>Board of Director Points</h1>
+    </header>
 
-  <nav>
+    <nav>
     <ul>
-      <li><a href="absence.html">Absence Request</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a href="statistics.html">Statistics</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="points.html">Points</a></li>
-      <li><a href="documents.html">Documents</a></li>
-      <li><a href="sharepoint.html">SharePoint</a></li>
+        <li><a href="absence.html">Absence Request</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="points.html">Points</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="sharepoint.html">SharePoint</a></li>
     </ul>
-  </nav>
+    </nav>
+    <!-- Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <main class="container">
     <!-- Graph image -->
     <section id="points-graph-section">
       <h2>Member Points Overview</h2>
-      <img
-        src="https://drive.google.com/uc?export=view&id=1256xfexeG691KmyuCwkG1FInrFXSfNXg/view?usp=sharing"
-        alt="Graph of member points over time"
-        class="points-graph"
-      />
+      <canvas id="pointsChart" class="points-graph"></canvas>
+
     </section>
 
     <!-- Ways to Earn Points -->
@@ -64,6 +63,50 @@
       </ul>
     </section>
   </main>
+
+  <script>
+    // 1) Your data: replace these arrays with your real values
+    const labels = [
+      'Engagement', 'Strategic Technology', 'HEEM', 'Gov. Relations', 'H&S', 'Sustainability', 'D&I', 'Communications'
+    ];
+    const dataPoints = [
+      7429, 4187, 7602, 6280, 8015, 6520, 4569, 4045
+    ];
+  
+    // 2) Get the 2D drawing context
+    const ctx = document.getElementById('pointsChart').getContext('2d');
+  
+    // 3) Create the chart
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Member Points',
+          data: dataPoints,
+          borderColor: '#4CAF50',    // your green (or gold '#FFD700')
+          backgroundColor: 'rgba(76,175,80,0.2)', // semi‑transparent fill
+          fill: true,
+          tension: 0.3               // smooth curves
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'Committee' }
+          },
+          y: {
+            title: { display: true, text: 'Points' },
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 
   <footer>
     <p>&copy; 2025 Purdue Student Government. All rights reserved.</p>
