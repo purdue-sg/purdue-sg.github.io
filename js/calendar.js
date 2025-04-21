@@ -1,7 +1,7 @@
 // calendar.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ■ your events map here ■
+    // map of ISO dates → event names
     const events = {
       '2025-04-30': ['🐶 Pet a Puppy']
     };
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const calendarContainer = document.getElementById('calendar');
     if (!calendarContainer) {
-      console.error('❌ calendar container not found! Make sure <div id="calendar"> is in your HTML.');
+      console.error('❌ calendar container not found! Check your HTML.');
       return;
     }
     console.log('✅ Found calendar container, rendering for year', year);
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const firstDay   = new Date(year, m, 1).getDay();
       const daysInMonth = new Date(year, m + 1, 0).getDate();
   
+      // build month card
       const monthEl = document.createElement('div');
       monthEl.className = 'calendar-month';
   
@@ -46,19 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const daysGrid = document.createElement('div');
       daysGrid.className = 'days';
   
-      // empty slots
+      // leading empty cells
       for (let i = 0; i < firstDay; i++) {
         const empty = document.createElement('div');
         empty.className = 'empty';
         daysGrid.appendChild(empty);
       }
   
-      // day numbers + events
+      // day cells, with event toggle
       for (let d = 1; d <= daysInMonth; d++) {
         const dayCell = document.createElement('div');
         dayCell.textContent = d;
   
-        // build ISO date string
         const isoDate = [
           year,
           String(m + 1).padStart(2, '0'),
@@ -66,31 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
         ].join('-');
   
         if (events[isoDate]) {
-            // mark it clickable
-            dayCell.classList.add('has-event');
-    
-            // build the hidden list
-            const ul = document.createElement('ul');
-            ul.className = 'events';
-            events[isoDate].forEach(text => {
-              const li = document.createElement('li');
-              li.textContent = text;
-              ul.appendChild(li);
-            });
-            dayCell.appendChild(ul);
-    
-            // toggle on click
-            dayCell.addEventListener('click', () => {
-              dayCell.classList.toggle('active');
-            });
-          }
-    
-          daysGrid.appendChild(dayCell);
+          dayCell.classList.add('has-event');
+          const ul = document.createElement('ul');
+          ul.className = 'events';
+          events[isoDate].forEach(text => {
+            const li = document.createElement('li');
+            li.textContent = text;
+            ul.appendChild(li);
+          });
+          dayCell.appendChild(ul);
+  
+          dayCell.addEventListener('click', () => {
+            dayCell.classList.toggle('active');
+          });
         }
-    
-        monthEl.appendChild(daysGrid);
-        container.appendChild(monthEl);
+  
+        daysGrid.appendChild(dayCell);
       }
-    });
+  
+      monthEl.appendChild(daysGrid);
+      calendarContainer.appendChild(monthEl);
+    }
+  
+    console.log('🎉 calendar render complete');
+  });
   
   
