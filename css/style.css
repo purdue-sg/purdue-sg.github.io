@@ -102,3 +102,15 @@ nav a {
   }
 }
 
+@media (max-width: 480px) {
+  /* each month becomes full‑width, stacked vertically */
+  #calendar {
+    grid-template-columns: 1fr !important;
+  }
+  /* add some breathing room between months */
+  .calendar-month {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
