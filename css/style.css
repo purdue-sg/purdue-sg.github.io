@@ -43,3 +43,62 @@ footer {
   font-size: 0.9rem;
   color: #666666;
 }
+
+/* 1. Allow nav items to wrap and shrink on small screens */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;              /* wrap into new lines */
+  justify-content: center;
+  gap: 0.5rem;                  /* small gap between items */
+}
+nav li {
+  margin: 0;                    /* let gap handle spacing */
+}
+nav a {
+  padding: 0.5rem 1rem;         /* make tap targets bigger */
+}
+
+/* 2. Make your main container padding smaller on narrow viewports */
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+  body {
+    font-size: 0.9rem;          /* slightly smaller text */
+  }
+}
+
+/* 3. Turn your calendar grid into a fluid auto‑fit layout */
+@media (min-width: 0) {
+  /* overrides fixed 4 columns */
+  #calendar {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); */
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .calendar-month {
+    font-size: 0.85rem;         /* shrink month cards slightly */
+  }
+  .calendar-month header {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+  .calendar-month .weekdays div,
+  .calendar-month .days div {
+    padding: 0.3rem;
+  }
+}
+
+/* 4. Collapse your nav into a toggle‑able menu on very small screens (optional) */
+@media (max-width: 400px) {
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  nav a {
+    text-align: center;
+  }
+}
+

@@ -81,7 +81,7 @@
   .calendar-month .days div.has-event {
     cursor: pointer;
     /* optional: give a slight highlight */
-    background: #fffbf0;
+    background: #8e6f3e;
   }
   
   /* when a day-cell has the "active" class, show its events */
