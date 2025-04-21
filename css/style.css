@@ -143,5 +143,10 @@ nav a {
   background: #fdf7e0;       /* subtle highlight */
 }
 
+/* force icon color */
+#useful-links .icon-links a i {
+  color: #555960 !important;
+}
+
 
 
