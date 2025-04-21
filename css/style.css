@@ -136,11 +136,25 @@ nav a {
   text-decoration: none;
 }
 
+
+/* caption styling */
+#useful-links .icon-links .icon-label {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
 /* hover/focus states */
 #useful-links .icon-links a:hover,
 #useful-links .icon-links a:focus {
   color: #FFD700;            /* gold on hover */
   background: #fdf7e0;       /* subtle highlight */
+}
+
+#useful-links .icon-links a:hover .icon-label,
+#useful-links .icon-links a:focus .icon-label {
+  color: #444;       /* slightly darker text on hover */
 }
 
 /* force icon color */
