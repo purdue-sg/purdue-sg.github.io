@@ -164,5 +164,29 @@ nav a {
   color: #555960 !important;
 }
 
+/* style the points table */
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+}
+.points-table th,
+.points-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+.points-table thead th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+.points-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
 
-
+/* spacing for the "What Points Mean" section */
+#points-meaning {
+  margin-bottom: 2rem;
+}
+#points-meaning p {
+  line-height: 1.5;
+}

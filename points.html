@@ -19,11 +19,33 @@
         list-style: disc inside;
         margin-left: 1rem;
     }
-    </style>
-    <link
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet"
-    />
+    
+    /* big button for submission */
+    .abs-submit {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 2rem auto;
+      padding: 1.25rem 1rem;
+      background: #FFD700;
+      color: #333;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .abs-submit:hover,
+    .abs-submit:focus {
+      background: #e6c500;
+      transform: translateY(-2px);
+    }
+  </style>
+  <link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+  />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma"        content="no-cache" />
     <meta http-equiv="Expires"       content="0" />
@@ -57,27 +79,66 @@
 
     <!-- Ways to Earn Points -->
     <section id="earning-points">
-      <h2>Ways to Earn Points</h2>
-      <ul>
-        <li>Attend weekly PSG meetings</li>
-        <li>Volunteer at PSU‑sponsored events</li>
-        <li>Submit timely absence requests when you can’t make a meeting</li>
-        <li>Participate in special committees or task forces</li>
-        <li>Lead a project or initiative (e.g., community outreach)</li>
-        <li>Complete training workshops (leadership, diversity, etc.)</li>
-      </ul>
-    </section>
+        <h2>Ways to Earn Points</h2>
+        <table class="points-table">
+          <thead>
+            <tr>
+              <th>Points</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>50</td>
+              <td>Attend weekly main PSG branch meetings</td>
+            </tr>
+            <tr>
+              <td>40</td>
+              <td>Lead a project or initiative</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>Volunteer at PSG events</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>Participate in special committees or task forces</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Attend your Committee meeting</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Find someone in Cabinet randomly</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    
+      <!-- What Points Mean subsection -->
+      <section id="points-meaning">
+        <h2>What Points Mean</h2>
+        <p>
+          Your accumulated points reflect your engagement and leadership in PSG.
+          They factor into eligibility for executive positions, awards, and
+          end‑of‑year recognition. The more points you earn, the more you
+          demonstrate commitment to our mission and community impact.
+          Anyone within PSG can earn points, Senators, BOD Members, Court
+          Members. If you want to claim your points, please fill out the form below
+        </p>
+      </section>
+    </main>
 
     <section id="useful-links" class="container">
-        <h2>Useful Links</h2>
-        <div class="icon-links">
-          <!-- wrap both the <i> and <span> inside this <a> -->
-          <a href="points.html" title="Submit Points" aria-label="Submit Points">
-            <i class="material-icons">bar_chart</i>
-            <span class="icon-label">Submit Points</span>
-          </a>
-          <!-- …other icons… -->
-        </div>
+        <a
+      href="https://your-absence-form-link.example.com"
+      class="abs-submit"
+      target="_blank"
+      rel="noopener"
+    >
+      Submit Points Request
+    </a>
       </section>
   </main>
 
