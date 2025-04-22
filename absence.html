@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PSG Portal – <div absence=""></div></title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* big button for submission */
+    .abs-submit {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 2rem auto;
+      padding: 1.25rem 1rem;
+      background: #FFD700;
+      color: #333;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .abs-submit:hover,
+    .abs-submit:focus {
+      background: #e6c500;
+      transform: translateY(-2px);
+    }
+
+    /* rules section */
+    #absence-rules {
+      margin-top: 2rem;
+    }
+    #absence-rules ul {
+      list-style: disc inside;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -24,10 +57,26 @@
   </nav>
 
   <main class="container">
-    <!-- UNIQUE CONTENT FOR THIS PAGE: -->
-    <section>
-      <h2>Absence Request</h2>
-      <p>…your page‑specific content here…</p>
+    <!-- Big, clickable link -->
+    <a
+      href="https://your-absence-form-link.example.com"
+      class="abs-submit"
+      target="_blank"
+      rel="noopener"
+    >
+      Submit Absence Request
+    </a>
+
+    <!-- Absence rules -->
+    <section id="absence-rules">
+      <h2>Absence Request Rules</h2>
+      <ul>
+        <li>All absences must be submitted at least 24 hours before the meeting.</li>
+        <li>Include your name, date of absence, and reason.</li>
+        <li>Emergency absences (illness, family emergency) may be submitted up to 1 hour before.</li>
+        <li>Unexcused absences will result in point deductions.</li>
+        <li>If you miss more than 3 meetings unexcused, you will be flagged by membership.</li>
+      </ul>
     </section>
   </main>
 
