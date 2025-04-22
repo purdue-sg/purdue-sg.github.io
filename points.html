@@ -8,21 +8,25 @@
   <style>
     /* center the graph and give it some breathing room */
     .points-graph {
-      display: block;
-      max-width: 100%;
-      height: 300px;
-      max-height: 300px;   /* don’t let it grow past this */
-      margin: 0 auto 2rem;
+        display: block;
+        max-width: 100%;
+        height: 300px;
+        max-height: 300px;   /* don’t let it grow past this */
+        margin: 0 auto 2rem;
     }
     /* style for the earning‑points list */
     #earning-points ul {
-      list-style: disc inside;
-      margin-left: 1rem;
+        list-style: disc inside;
+        margin-left: 1rem;
     }
-  </style>
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma"        content="no-cache" />
-  <meta http-equiv="Expires"       content="0" />
+    </style>
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma"        content="no-cache" />
+    <meta http-equiv="Expires"       content="0" />
 </head>
 <body>
     <header>
@@ -46,7 +50,7 @@
   <main class="container">
     <!-- Graph image -->
     <section id="points-graph-section">
-      <h2>Member Points Overview</h2>
+      <h2>Points Chart</h2>
       <canvas id="pointsChart" class="points-graph"></canvas>
 
     </section>
@@ -63,6 +67,16 @@
         <li>Complete training workshops (leadership, diversity, etc.)</li>
       </ul>
     </section>
+
+    <section id="useful-links" class="container">
+        <h2>Useful Links</h2>
+        <div class="icon-links">
+            <a href="https://purdue0.sharepoint.com/sites/PurdueStudentGovernment/SitePages/Event-Planning.aspx" title="Submit Points" aria-label="Submit Points">
+                <i class="material-icons">social_leaderboard</i>
+                <span class="icon-label">Submit Points</span>
+            </a>
+        </div>
+        </section>
   </main>
 
   <script>
