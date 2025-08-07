@@ -3,11 +3,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // map of ISO dates → event names
     const events = {
-      '2025-04-30': ['Quite Week is Loud\nKrach Lawn 12-4pm']
+      '2025-10-30': ['Quite Week is Loud\nKrach Lawn 12-4pm']
     };
   
     const monthNames = [
-      'April','August','September','October','November','December'
+      'August','September','October','November','December'
     ];
     const weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     const year = new Date().getFullYear();
