@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // map of ISO dates → event names
     const events = {
       '2025-10-30': ['Quite Week is Loud\nKrach Lawn 12-4pm'],
-      '2025-8-30': ['QuiteLoud\nKrach Lawn 12-4pm']
+      '2025-9-30': ['QuiteLoud\nKrach Lawn 12-4pm']
     };
   
     const monthNames = [
