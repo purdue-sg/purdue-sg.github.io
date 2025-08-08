@@ -3,41 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PSG Portal – <div absence=""></div></title>
-  <link rel="stylesheet" href="css/style.css" />
-  <style>
-    /* big button for submission */
-    .abs-submit {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      margin: 2rem auto;
-      padding: 1.25rem 1rem;
-      background: #ebd99f;
-      color: #333;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 0.5rem;
-      transition: background 0.2s, transform 0.1s;
-    }
-    .abs-submit:hover,
-    .abs-submit:focus {
-      background: #e6c500;
-      transform: translateY(-2px);
-    }
+  <title>PSG Portal – Absences</title>
 
-    /* rules section */
-    #absence-rules {
-      margin-top: 2rem;
-    }
-    #absence-rules ul {
-      list-style: disc inside;
-      margin-left: 1rem;
-      font-size: 0.95rem;
-    }
-  </style>
+  <!-- Icons (optional, used in cards) -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Sitewide styles -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="centered-row">
@@ -56,46 +28,56 @@
   </nav>
 
   <main class="container">
-    <!-- Big, clickable link -->
-    <a
-      href="https://purdue.ca1.qualtrics.com/jfe/form/SV_6J36BkKFf7OvC9U"
-      class="abs-submit"
-      target="_blank"
-      rel="noopener"
-    >
-      Submit Absence Request
-    </a>
-    <section id="absence-request"></section>
+    <section>
+      <h2>Submit & Track Absences</h2>
+      <p>Use the tools below to submit an absence request and review the rules for Board of Directors and Senate absences.</p>
+    </section>
 
-    <!-- Absence rules -->
+    <!-- Actions as cards -->
+    <section>
+      <div class="card-grid">
+        <div class="card">
+          <i class="material-icons" aria-hidden="true" style="font-size:2rem;">assignment_turned_in</i>
+          <h3>Submit Absence Request</h3>
+          <p>Fill out the official Qualtrics form to log an upcoming absence.</p>
+          <a href="https://purdue.ca1.qualtrics.com/jfe/form/SV_6J36BkKFf7OvC9U" target="_blank" rel="noopener">Open Form →</a>
+        </div>
+
+        <div class="card">
+          <i class="material-icons" aria-hidden="true" style="font-size:2rem;">groups</i>
+          <h3>BOD Absence Rules</h3>
+          <p>Requirements for Board of Directors members, including notifications and timelines.</p>
+          <a href="https://purdue0.sharepoint.com/:w:/r/sites/PurdueStudentGovernment/_layouts/15/Doc.aspx?sourcedoc=%7BF872F68D-B0AA-4F93-A766-1CA61A391032%7D&file=Absence%20Policy.docx&action=default&mobileredirect=true" target="_blank" rel="noopener">View Policy →</a>
+        </div>
+
+        <div class="card">
+          <i class="material-icons" aria-hidden="true" style="font-size:2rem;">how_to_vote</i>
+          <h3>Senate Proxy Report</h3>
+          <p>Submit a Senate proxy report when you’re unable to attend a meeting.</p>
+          <a href="https://purdue0.sharepoint.com/:w:/r/sites/PurdueStudentGovernment/_layouts/15/Doc.aspx?sourcedoc=%7B92B4C55F-02DB-48C9-816B-ADF2C7FA5E35%7D&file=Proxy%20Report.docx&action=default&mobileredirect=true" target="_blank" rel="noopener">Open Report →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inline rules (readable, consistent) -->
     <section id="absence-rules">
       <h2>BOD Absence Request Rules</h2>
-      <p>
-        As a member of the Board of Directors, you must fill out the Qualtrics Form linked above. You must also communicate your absence with upper leadership (ED, DCOS, or COS).
-      </p>
-      <a
-        href="https://purdue0.sharepoint.com/:w:/r/sites/PurdueStudentGovernment/_layouts/15/Doc.aspx?sourcedoc=%7BF872F68D-B0AA-4F93-A766-1CA61A391032%7D&file=Absence%20Policy.docx&action=default&mobileredirect=true"
-        class="abs-submit"
-        target="_blank"
-        rel="noopener"
-        >
-        BOD Absence Rules
-    </a>
+      <p>As a member of the Board of Directors:</p>
+      <ul>
+        <li>Submit the Qualtrics absence request form (link above) before the meeting you’ll miss.</li>
+        <li>Notify upper leadership: Executive Director (ED), Deputy Chief of Staff (DCOS), or Chief of Staff (COS).</li>
+        <li>Follow any additional instructions listed in the official Absence Policy (policy link above).</li>
+      </ul>
     </section>
 
     <section id="senate-absence">
-        <h2>Senate Absence Request Rules</h2>
-        <p>
-          As a Senator, you must fill out the Proxt Report document linked below. Rules for Proxy Reports are given in the Document. You still must fill out the Qualtrics Form linked above as well.
-        </p>
-    <a
-        href="https://purdue0.sharepoint.com/:w:/r/sites/PurdueStudentGovernment/_layouts/15/Doc.aspx?sourcedoc=%7B92B4C55F-02DB-48C9-816B-ADF2C7FA5E35%7D&file=Proxy%20Report.docx&action=default&mobileredirect=true"
-        class="abs-submit"
-        target="_blank"
-        rel="noopener"
-        >
-        Senate Proxy Report
-    </a>
+      <h2>Senate Absence & Proxy Rules</h2>
+      <p>As a Senator:</p>
+      <ul>
+        <li>Submit the Qualtrics absence request form (link above).</li>
+        <li>Complete the <strong>Senate Proxy Report</strong> (card above) if you will designate a proxy.</li>
+        <li>Review the Proxy Report document for eligibility, deadlines, and required information.</li>
+      </ul>
     </section>
   </main>
 
@@ -104,3 +86,4 @@
   </footer>
 </body>
 </html>
+
