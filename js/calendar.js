@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const monthNames = [
       'August','September','October','November','December'
     ];
+    const startMonth = 7; // August is month index 7 (0-based)
+    const monthsToShow = monthNames.length;
     const weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     const year = new Date().getFullYear();
   
@@ -19,9 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log('✅ Found calendar container, rendering for year', year);
   
-    for (let m = 0; m < 6; m++) {
-      const firstDay   = new Date(year, m, 1).getDay();
-      const daysInMonth = new Date(year, m + 1, 0).getDate();
+    for (let m = 0; m < monthsToShow; m++) {
+      const monthIndex = startMonth + m;
+      const firstDay   = new Date(year, monthIndex, 1).getDay();
+      const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
   
       // build month card
       const monthEl = document.createElement('div');
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         const isoDate = [
           year,
-          String(m + 1).padStart(2, '0'),
+          String(monthIndex + 1).padStart(2, '0'),
           String(d).padStart(2, '0')
         ].join('-');
   
