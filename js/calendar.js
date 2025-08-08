@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'August','September','October','November','December'
     ];
     const startMonth = 8; // August is month index 7 (0-based)
-    const monthsToShow = monthNames.length - 1;
+    const monthsToShow = monthNames.length;
     const weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
     const year = new Date().getFullYear();
   
