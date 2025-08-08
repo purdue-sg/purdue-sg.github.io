@@ -190,3 +190,18 @@ nav a {
 #points-meaning p {
   line-height: 1.5;
 }
+
+.centered-row {
+  background-color: #daaa00;  /* PSG gold */
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.centered-row img {
+  height: 50px;
+}
