@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log('✅ Found calendar container, rendering for year', year);
   
-    for (let m = 0; m < monthsToShow; m++) {
+    for (let m = 0; m <= monthsToShow; m++) {
       const monthIndex = startMonth + m;
       const firstDay   = new Date(year, monthIndex, 1).getDay();
       const daysInMonth = new Date(year, monthIndex + 1, 0).getDate();
