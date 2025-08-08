@@ -5,34 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PSG Portal – <div index=""></div></title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PSG Internal Homepage</title>
+  <style>
+    :root {
+      --psg-gold: #CEB888;
+      --psg-black: #000000;
+      --psg-gray: #f8f8f8;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: var(--psg-gray);
+      color: var(--psg-black);
+    }
+
+    header {
+      background-color: var(--psg-black);
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .welcome {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .welcome h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      border: 2px solid var(--psg-gold);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--psg-black);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>PSG Home Page</h1>
+    <h1>Purdue Student Government</h1>
+    <img src="psg-logo.png" alt="PSG Logo" />
   </header>
 
   <nav>
     <ul>
       <li><a href="absence.html">Absence Request</a></li>
       <li><a href="events.html">Events</a></li>
-      <li><a href="statistics.html">Statistics</a></li>
       <li><a href="index.html">Home</a></li>
       <li><a href="points.html">Points</a></li>
-      <li><a href="documents.html">Documents</a></li>
-      <li><a href="sharepoint.html">SharePoint</a></li>
+      <li><a href="money.html">SharePoint</a></li>
     </ul>
   </nav>
 
-  <main class="container">
-    <!-- UNIQUE CONTENT FOR THIS PAGE: -->
-    <section>
-      <h2>Index</h2>
-      <p>Idk what to put here</p>
-    </section>
-  </main>
+  <section class="welcome">
+    <h2>Welcome to the PSG Internal Hub</h2>
+    <p>Your one-stop portal for leadership, organization, and impact.</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>Absence Requests</h3>
+      <p>Submit Absence Requests and find absence related rules!</p>
+      <a href="absence.html">Go to Absence Requests →</a>
+    </div>
+    <div class="card">
+      <h3>Events and Meetings</h3>
+      <p>Stay on track with upcoming events and meetings.</p>
+      <a href="events.html">View Calendar →</a>
+    </div>
+    <div class="card">
+      <h3>Points</h3>
+      <p>See the current standings in the Points Competition</p>
+      <a href="points.html">Open Drive →</a>
+    </div>
+    <div class="card">
+      <h3>Submit Money Requests</h3>
+      <p>Submit reimbursements or see Money Related Rules</p>
+      <a href="money.html">Submit Form →</a>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Purdue Student Government. All rights reserved.</p>
+    © 2025 Purdue Student Government — For internal use only.
   </footer>
 </body>
 </html>
